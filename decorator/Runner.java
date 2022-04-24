@@ -1,5 +1,9 @@
 package decorator;
 
+import decorator.burgerRestaurant.burgers.Burger;
+import decorator.burgerRestaurant.burgers.SuperBurger;
+import decorator.burgerRestaurant.burgers.ZingerBurger;
+
 public class Runner {
     public static void main(String[] args) {
         Burger zinger = new ZingerBurger.Builder()

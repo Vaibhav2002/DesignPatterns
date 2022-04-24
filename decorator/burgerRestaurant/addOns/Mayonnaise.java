@@ -1,24 +1,26 @@
-package decorator;
+package decorator.burgerRestaurant.addOns;
+
+import decorator.burgerRestaurant.burgers.Burger;
 
 public class Mayonnaise extends AddOns {
 
     Burger burger;
-    Mayonnaise(Burger burger){
+    public Mayonnaise(Burger burger){
         this.burger = burger;
     }
 
     @Override
-    String getDescription() {
+    public String getDescription() {
         return "Mayonnaise, "+burger.getDescription();
     }
 
     @Override
-    int price() {
+    public int price() {
         return 20 + burger.price();
     }
 
     @Override
-    int calories() {
+    public int calories() {
         return 6;
     }
 }

@@ -1,34 +1,37 @@
-package decorator;
+package decorator.burgerRestaurant.burgers;
 
+
+import decorator.burgerRestaurant.addOns.Cheese;
+import decorator.burgerRestaurant.addOns.Mayonnaise;
 
 public abstract class Burger {
     String name = "Unknown burger";
 
-    String getDescription() {
+    public String getDescription() {
         return name;
     }
 
-    abstract int price();
+    public abstract int price();
 
-    abstract int calories();
+    public abstract int calories();
 
-    static class Builder{
+    public static class Builder{
         Burger burger;
         Builder(Burger burger){
             this.burger = burger;
         }
 
-        Builder addCheese(){
+        public Builder addCheese(){
             burger = new Cheese(burger);
              return this;
         }
 
-        Builder addMayonnaise(){
+        public Builder addMayonnaise(){
             burger = new Mayonnaise(burger);
             return this;
         }
 
-        Burger build(){
+        public Burger build(){
             return burger;
         }
     }

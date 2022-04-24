@@ -1,4 +1,4 @@
-package decorator;
+package decorator.burgerRestaurant.burgers;
 
 public class SuperBurger extends Burger{
 
@@ -7,18 +7,18 @@ public class SuperBurger extends Burger{
     }
 
     @Override
-    int price() {
+    public int price() {
         return 200;
     }
 
     @Override
-    int calories() {
+    public int calories() {
         return 120;
     }
 
-    static class Builder extends Burger.Builder{
+    public static class Builder extends Burger.Builder{
 
-        Builder() {
+        public Builder() {
             super(new SuperBurger());
         }
     }
