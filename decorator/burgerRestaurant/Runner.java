@@ -1,4 +1,4 @@
-package decorator;
+package decorator.burgerRestaurant;
 
 import decorator.burgerRestaurant.burgers.Burger;
 import decorator.burgerRestaurant.burgers.SuperBurger;
@@ -11,7 +11,8 @@ public class Runner {
                 .build();
         Burger superBurger = new SuperBurger.Builder()
                 .addCheese()
-                .addMayonnaise().build();
+                .addMayonnaise()
+                .build();
         System.out.println(zinger.getDescription() + " " + zinger.price());
         System.out.println(superBurger.getDescription() + " " + superBurger.price());
     }
